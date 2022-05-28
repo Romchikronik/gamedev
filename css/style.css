@@ -25,6 +25,12 @@ button {
   cursor: pointer;
 }
 
+body {
+  background: #fff;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+}
+
 .fixed-top {
   position: fixed !important;
   top: 0;
@@ -225,7 +231,7 @@ button {
 }
 
 .gallery {
-  padding: 63px 0 120px;
+  padding: 60px 0 120px;
 }
 
 .gallery__title {
@@ -233,15 +239,6 @@ button {
   font-size: 45px;
   line-height: 38px;
   color: #000;
-}
-
-.gallery-slider {
-  /*     &__prev{
-            background: #fff;
-            img{
-                transform: rotate(180deg);    
-            }
-        } */
 }
 
 .gallery-slider__item {
@@ -280,6 +277,25 @@ button {
   height: 100%;
 }
 
+.gallery-slider__more {
+  display: none;
+  width: 100%;
+}
+
+.gallery-slider__more a {
+  display: inline-block;
+  margin-left: auto;
+  font-size: 14px;
+  color: #333;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.gallery-slider__more a:hover {
+  text-decoration: underline;
+}
+
 .gallery-slider__about {
   position: absolute;
   bottom: -20px;
@@ -307,17 +323,18 @@ button {
 .gallery-slider__num span {
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
   color: #e0e0e0;
 }
 
 .gallery-slider__num span:first-child {
   color: #333;
-  margin-right: 26px;
+  margin-right: 15px;
 }
 
 .gallery-slider__num span:last-child {
   color: #bdbdbd;
-  margin-left: 26px;
+  margin-left: 15px;
 }
 
 .gallery-slider__prev,
@@ -329,7 +346,7 @@ button {
   border-radius: 50%;
   position: absolute;
   bottom: -15px;
-  left: 40%;
+  left: 38%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -346,7 +363,7 @@ button {
 }
 
 .gallery-slider__next {
-  left: 60%;
+  left: 62%;
 }
 
 .footer {
@@ -495,6 +512,21 @@ button {
     margin-bottom: 20px;
   }
 
+  .gallery-slider__more {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .gallery-slider__prev,
+  .gallery-slider__next {
+    left: 30%;
+  }
+
+  .gallery-slider__next {
+    left: 70%;
+  }
+
   .footer-social {
     padding: 0;
   }
@@ -516,8 +548,13 @@ button {
     margin-bottom: 15px;
   }
 
-  .gallery-slider__num span:first-child {
-    padding-left: 30px;
+  .gallery-slider__prev,
+  .gallery-slider__next {
+    left: 20%;
+  }
+
+  .gallery-slider__next {
+    left: 80%;
   }
 
   .footer__row {
@@ -552,6 +589,11 @@ button {
 }
 
 @media (max-width: 575.98px) {
+  .logo {
+    width: 130px;
+    height: 32px;
+  }
+
   .header-menu__link {
     font-size: 15px;
   }
@@ -562,7 +604,7 @@ button {
 
   .gallery__title {
     margin: 0;
-    text-align: left;
+    text-align: center;
   }
 
   .gallery-slider__item {
